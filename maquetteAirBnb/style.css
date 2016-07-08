@@ -7,9 +7,8 @@
 }
 
 .header{
-  position: relative;
-  display: inline-block;
-  overflow: auto;
+  top: auto;
+  width: 100%;
 }
 
 .header img{
@@ -31,18 +30,28 @@
 }
 
 #dropdown-content{
-
+  display: none;
 }
 
 #menu{
-  float: right;
+  position: absolute;
+  right: 10px;
+  top: 25px;
 }
 
 #hote{
   border: 2px double white;
+  margin-right: 20px;
+  padding: 5px;
 }
 
 #imageDeFond{
   position: absolute;
   z-index: -1;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
 }
