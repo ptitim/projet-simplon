@@ -18,6 +18,12 @@
 }
 
 .txthaut{
+  text-align: center;
+}
+
+.txthaut p:first-child {
+  font-size: 50px;
+  font-weight: bold;
 
 }
 
