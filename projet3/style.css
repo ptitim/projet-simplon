@@ -1,0 +1,123 @@
+@media (max-width:945px) {
+  .navbar{
+    position: fixed;
+    background-color: black;
+    height: 40px;
+    margin-top: -10px;
+    right: 0px;
+    left: 0px;
+  }
+
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    min-height: 600px;
+    height: 100%;
+  }
+}
+
+@media (min-width:950px){
+  .navbar{
+    position: fixed;
+    background-color: black;
+    height: 40px;
+    margin-top: -10px;
+    right: 0px;
+    left: 0px;
+  }
+
+  .container{
+    margin-left: 130px;
+    margin-right: 130px;
+    min-height: 600px;
+    height: 100%;
+  }
+
+}
+.container{
+  background-color: white;
+}
+
+#grpBouton{
+  margin-top: 10px;
+  color: white;
+  margin-left: 15%;
+}
+
+#desactiver{
+  text-decoration: none;
+  color: white;
+}
+
+.navlien{
+    margin-right: 5px;
+    text-decoration: none;
+    color:  #adadad ;
+}
+
+.navlien:hover{
+  color: #d8d8d8;
+  text-shadow: 1px 1px  #adadad;
+}
+
+.navlien:visited{
+  color:  #adadad ;
+  text-decoration: none;
+
+}
+
+.article input  {
+  color : blue;
+}
+
+.article{
+  overflow: auto;
+  margin: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+
+img{
+  float: left;
+  margin-right: 20px;
+}
+.texte{
+  text-align: left;
+}
+
+#titre{
+  margin-top: 20px;
+  margin-left: 5%;
+}
+#titre p{
+  margin: 0 auto;
+}
+#titreSuite{
+  font-size: 20px;
+}
+
+.princ{
+  overflow: auto;
+  padding-top: 30px;
+}
+
+body {
+  background-color:  #6c6c6c;
+}
+h1{
+  font-size: 30px
+}
+h2{
+  font-size: 20px;
+}
+h3{
+  font-size: 15px;
+}
+p{
+  font-size: 10px;
+}

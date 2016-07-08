@@ -1,0 +1,48 @@
+.principale{
+
+}
+
+.haut{
+
+}
+
+.header{
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+}
+
+.header img{
+  height: 100px;
+  width: 150px;
+
+}
+
+.txthaut{
+
+}
+
+.recherche{
+
+}
+
+#dropdown{
+
+}
+
+#dropdown-content{
+
+}
+
+#menu{
+  float: right;
+}
+
+#hote{
+  border: 2px double white;
+}
+
+#imageDeFond{
+  position: absolute;
+  z-index: -1;
+}
