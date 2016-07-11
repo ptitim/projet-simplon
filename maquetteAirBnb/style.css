@@ -7,12 +7,18 @@
 }
 
 .haut{
-  height: 700px;
+  height: 100vh;
 }
 
 .header{
-  top: auto;
+  position: absolute;
+  display: block;
+  top: 0px;
+  right: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255,255, 0.2);, 0, 0);
 }
 
 .header img{
@@ -51,6 +57,12 @@
   padding: 0px;
   margin: 0px;
 }
+.sousrecherche input{
+  border: 2px solid orange;
+  padding: 0;
+  background-color: silver;
+}
+
 .sousRcherche input;nth-child(4){
   color: red;
   background-color: red;
@@ -75,8 +87,15 @@ dropdown:hover, dropdown-content{
   display: block;
   background-color: black;
 }
+
+#logo{
+    top: 0;
+    right: 0px;
+}
+
 #menu{
   position: absolute;
+  background-color: red;
   right: 10px;
   top: 25px;
 }
@@ -88,7 +107,7 @@ dropdown:hover, dropdown-content{
 
 #menu a:hover{
   margin: 1px;
-  color: white;
+  color: silver;
   border: 1px solid black;
 
 }
@@ -99,16 +118,22 @@ dropdown:hover, dropdown-content{
   padding: 5px;
 }
 
-#imageDeFond{
+video{
+  top:-25px;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  display: inline;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  z-index: -1;
-  height: 700px;
-  width: 101%;
-  padding: 0px;
 }
+
 
 a{
   text-decoration: none;
-  color: black;
+  color: white;
   margin-right: 10px;
 }
