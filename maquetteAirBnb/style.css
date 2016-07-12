@@ -1,16 +1,17 @@
-.principale{
+  .principale{
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  position: absolute;
 }
 
 .haut{
   height: 100vh;
+  margin: 0px;
 }
 
 .header{
+  margin: 0;
   position: absolute;
   display: block;
   top: 0px;
@@ -24,23 +25,37 @@
 .header img{
   height: 100px;
   width: 150px;
-
 }
 
 .txthaut{
   text-align: center;
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 30%;
+  margin: 0px;
+}
+
+.millieuxPage{
+  z-index: 2;
+  background-color: white;
 }
 
 .txthaut p:first-child {
+  max-width: 100%;
   font-size: 50px;
   font-weight: bold;
+  margin: 0px;
 }
+
 .txthaut p:nth-child(2){
   background-color: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  margin: 0;
 }
 
 .recherche{
-  width: 101%;
+  width: 100%;
   text-align: center;
   position: absolute;
   height: 55px;
@@ -48,7 +63,10 @@
   background-color: rgba(0, 0, 0, 0.8);
   padding-top: 3px;
   overflow: auto;
+  margin: -10px;;
+  padding: 0;
 }
+
 .recherche form{
   padding: 10px;
 }
@@ -66,6 +84,17 @@
 .sousRcherche input;nth-child(4){
   color: red;
   background-color: red;
+}
+
+.premierdepage{
+  max-width: 300px;
+  position: relative;
+  left: 10%;
+  margin-top: 20px;
+}
+
+.premierdepage img{
+  float: left;
 }
 
 #dropdown{
@@ -95,7 +124,6 @@ dropdown:hover, dropdown-content{
 
 #menu{
   position: absolute;
-  background-color: red;
   right: 10px;
   top: 25px;
 }
@@ -118,11 +146,33 @@ dropdown:hover, dropdown-content{
   padding: 5px;
 }
 
+#cache{
+  position: relative;
+  background-color: white;
+  top: -20px;
+  height: 180px;
+  width: 101%;
+  z-index: 20;
+}
+
+#teco{
+
+  margin-top: 70px;
+  padding-top: 20px;
+  padding-left: 5px;
+}
+
+#teco p:first-child{
+  font-size: 15px;
+}
+
 video{
-  top:-25px;
+  top: -50px;
   right: 0;
   left: 0;
   z-index: 0;
+  min-width: 600px;
+  min-height: 800px;
   height: 100%;
   width: 100%;
   display: inline;
@@ -130,7 +180,6 @@ video{
   margin: 0;
   position: absolute;
 }
-
 
 a{
   text-decoration: none;
