@@ -4,23 +4,22 @@
     <meta charset="utf-8">
     <title>air Bnb</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link src="https://lineto.com/The+Fonts/Font+Categories/Text+Fonts/Circular/">
     <!--   -->
-
 
   </head>
   <body>
 
     <div class="principale">
-
+      <!-- la classe haut desend jusqu'au from-->
       <div class="haut">
-        <!-- <img src="data/voyages-organises11.jpg" id="imageDeFond"/> -->
-
-        <video loop muted autoplay>
-          <source src="data/videobg.mp4" type="video/mp4">
-        </video>
+        <!--image et video de fond -->
+        <img src="data/voyages-organises11.jpg" id="imageDeFond"/>
+        <video loop muted autoplay src="data/videobg.mp4"></video>
         <div class="header">
           <img src="data/logo airbnb2.png" alt="logo" id="logo"/>
 
+          <!--menu en haut guche-->
           <section id="menu">
             <a href="" id="hote">Devenez hote</a>
             <a href="#" class="autres">Aide</a>
@@ -39,36 +38,33 @@
         </div>
         <span id="img-lecture"><img src="data/playbutton1.png" alt="bouton de lecture"/></span>
 
-
+        <!--Formulaire de recherche -->
         <div class="recherche">
           <form class="" action="index.html" method="post">
             <div class="sousRecherche">
-
-              <input type="text" name="where" value="ou?">
-              <input type="text" name="depart" value="depart">
-              <input type="text" name="arrivée" value="arriver">
-
-              <span id="dropdown">
-                <input type="text" name="passager" value="">
-                <div id="dropdown-content">
-                  <p>1 passager</p>
-                  <p>2 passager</p>
-                  <p>3 passager</p>
-                  <p>4 passager</p>
-                  <p>5 passager</p>
-                  <p>6 passager</p>
-                  <p>7 passager</p>
-                  <p>8 passager</p>
-                  <p>9 passager</p>
-                </div>
-              </span>
+              <input type="text" name="where" value="ou?" id="ou">
+              <input type="date" name="depart" value="depart" id="depart">
+              <input type="date" name="arrivée" value="arriver" id="arriver">
+              <select>
+                <option value="un">1 Passager</option>
+                <option value="deux">2 Passager</option>
+                <option value="trois">3 Passager</option>
+                <option value="quatre">4 Passager</option>
+                <option value="cinq">5 Passager</option>
+                <option value="six">6 Passager</option>
               <input type="button" name="name" value="rechercher">
             </div>
           </form>
+          <!--cache pour le depacement de la video-->
           <div class="cache">
           </div>
         </div>
+      </div><!--fin de la classe haut-->
 
+      <div class="">
+        <div id="prmArticle">
+          <img src="" alt=""/>
+        </div>
       </div>
 
     </div>
