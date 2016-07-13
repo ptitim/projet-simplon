@@ -7,7 +7,6 @@
     right: 0px;
     left: 0px;
   }
-
   .container{
     margin-left: auto;
     margin-right: auto;
@@ -26,15 +25,14 @@
     right: 0px;
     left: 0px;
   }
-
   .container{
     margin-left: 130px;
     margin-right: 130px;
     min-height: 600px;
     height: 100%;
   }
-
 }
+
 .container{
   background-color: white;
 }
@@ -86,6 +84,7 @@ img{
   float: left;
   margin-right: 20px;
 }
+
 .texte{
   text-align: left;
 }
@@ -94,9 +93,11 @@ img{
   margin-top: 20px;
   margin-left: 5%;
 }
+
 #titre p{
   margin: 0 auto;
 }
+
 #titreSuite{
   font-size: 20px;
 }
