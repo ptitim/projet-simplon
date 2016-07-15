@@ -68,7 +68,7 @@
 }
 
 .recherche form{
-  padding: 32px 0px;
+  padding: 25px 0px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -79,7 +79,7 @@
 }
 
 .sousRecherche input{
-  height: 45px;
+  height: 50px;
   border: none;
   padding: 0;
 }
@@ -166,8 +166,7 @@
 
 video{
   position: absolute;
-  z-index: 0;
-  height: 610px;
+  z-index: -1;
   width: 100%;
   object-fit:  fill;
 }
@@ -180,36 +179,36 @@ body{
 .container2{
   width: 100%;
   background-color: #ececec;
+  z-index: 3;
 }
 
 .article{
-  align-content: center;
-  box-sizing: content-box;
   z-index: 3;
   background-color: #ececec;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 40px;
 }
 
 #prmArticle{
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  display: inline-block;
+  width: 50%;
+  margin 0 auto;
+  display: inline-flex;
 }
 
 #prmArticle section{
   background-color: white;
   height: 344px;
+  width: 500px;
+  box-sizing: border-box;
   text-align: left;
+  padding-left: 15px;
 }
 
 #prmArticle img{
   height: 344px;
   width: 656px;
-  float: left;
 }
 
 #prmArticle p:nth-child(1){
