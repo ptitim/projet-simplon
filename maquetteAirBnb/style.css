@@ -69,9 +69,9 @@
 }
 
 .recherche form{
-    padding: 25px 0px;
+    padding: 30px 0px;
     margin-top: 0px;
-    margin-bottom: 0px;
+    box-sizing: border-box;
 }
 
 .sousRecherche{
@@ -80,8 +80,9 @@
 }
 
 .sousRecherche input{
-    height: 50px;
-    border: none;
+    padding: 5px 5px;
+    height: 40px;
+    border: 2px solid white;
     padding: 0;
     background-color: white;
 }
@@ -94,9 +95,16 @@
     max-width: 123px;
 }
 
+#fleche{
+    background-color: white;
+    width: 140px;
+    height: 40px;
+}
+
 #btn{ /*bouton de recherche*/
     background-color: #ff6a6a;
     width: 141px;
+    border: none;
 }
 
 .sousRecherche select{
@@ -183,7 +191,7 @@ body{
 
 #prmArticle{
     position: absolute;
-    left: 10%;
+    left: 20%;
     right: auto;
     display: inline-flex;
     width: 70%;
@@ -248,7 +256,6 @@ body{
     text-align: center;
     margin-top: 30px;
     display: inline-flex;
-    vertical-align: text-top;
 }
 
 .exempleDeDestination img{
@@ -258,20 +265,33 @@ body{
 }
 
 .exempleDeDestination p{
+    /* TODO: centrer les elements pour chrome verifier avec ie, fonctionne pour firefox */
+    font-size: 45px;
+    -webkit -moz box-sizing: border-box;
+            -moz box-sizing: border-box;
+                 box-sizing: border-box;
+    padding-top: 150px;
     width: 316px;
-    margin: auto;
+    height: 344px;
+    color: white;
 }
 
 #premierePhoto{
+    margin-left: 50%;
     max-width: 344px;
+    margin-right: 60px;
+    background-image: url("http://cham-blog.com/wp-content/uploads/2012/11/vieux-lille.jpg");
 }
 
 #deuxiemePhoto{
     max-width: 344px;
+    margin-right: 60px;
+    background-image: url("http://images.opt.be/images/elto_big/17194_1.jpg");
 }
 
 #troisiemePhoto{
     max-width: 344px;
+    background-image: url("http://blog.studyenjoy.com/wp-content/uploads/2016/02/londres.jpg");
 }
 
 
