@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>De quelle couleur...</title>
+</head>
+<body>
+<script type="text/javascript">
+    // on affiche la question
+    var reponseQuestion1 = prompt("De quelle couleur est le cheval blanc d'Henri IV");
+    var reponseText1 = "blanc";
+
+    var reponseText2 = "sept";
+    var reponseNombre2 = 7;
+
+    console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse dans la console
+    // si la réponse donnée est "blanc"
+    var continuer = true;
+    do{
+      if(reponseQuestion1.toLowerCase() == reponseText1){
+          alert('Bravo');
+          continuer = false;
+        } else{
+          alert('Erreur');
+          continuer = confirm("voulez vous coninuer ?");
+        }
+    }while(continuer);
+      continuer = true;
+      // affichage de la 2nde question
+      do{
+        var reponseQuestion2 = prompt('Combien y a t il de sept nains ?');
+        // si la réponse données est 7 (entier ou decimal) sept
+        if( reponseQuestion2.toLowerCase() == reponseText2  || parseInt(reponseQuestion2, 10) == reponseNombre2){
+            alert('Bravo');
+            continuer = false;
+          } else {
+            alert('Erreur');
+            continuer = confirm("Voulez vous continuer ?");
+          }
+      }while(continuer);
+</script>
+
+</body>
+</html>

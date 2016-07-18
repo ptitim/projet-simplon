@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //Devinez un nombre entre 0 et 100, generez aleatoirement
+          var verif = function(reponse,aleatoire){
+              var bool = false;
+              var dif = Math.abs(reponse - aleatoire) > 10;
+
+              if(reponse < aleatoire){
+                  if(dif)
+                    alert("beacoup trop petit");
+                  else
+                    alert("trop petit");
+              }else if (reponse > aleatoire) {
+                  if(dif)
+                      alert("beacoup trop grand")
+                    else
+                      alert("trop grand");
+              }else if (reponse < 0 || reponse > 100) {
+                  alert("rappel chiffre entre 0 et 9, essais perdu");
+              }else if (reponse === aleatoire) {
+                  bool = true;
+              }
+              return bool;
+            };
+
+        var rand = Math.ceil(Math.random()*101);//generation du chiffre aleatoire
+        console.log(rand);
+        var continuer = true;
+        var compteur = 0;
+
+        do{
+          var rep = parseInt(prompt("devinez le chiffre (entre 0 et 100):"));
+          compteur ++;
+
+          if(verif(rep,rand)){
+            continuer = false;
+            if(compteur === 1){
+                alert("GAGNEZ");
+                alert("OUAH DU PREMIER COUP ");
+            }else if(compteur < 100){
+                alert("GAGNEZ");
+                alert("vous avez mis " +compteur+ " coups");
+            }else{
+                alert("Mais pourquoi t'as continuer ?");
+            }
+
+          }else{
+            continuer = confirm("voulez vous continuer");
+          }
+        }while(continuer);
+    </script>
+  </body>
+</html>

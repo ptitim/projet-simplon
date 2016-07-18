@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>calculatrice</title>
+  </head>
+  <body>
+    <script>
+
+      var calc = function(prmC, scdC, op){
+          //prmc = premier chiffre, scdc = deuxieme chiffre , op ) operateur pour le calcul
+          switch(op){
+            case "+":
+              return prmC + scdC;
+            case "-":
+              return prmC - scdC;
+            case "*":
+              return prmC * scdC;
+            case "/":
+              return prmC * scdC;
+          }
+      };
+
+      var continuer = false;
+      var verif;/*booleen pour les boucle de verification d'entrée utilisateur*/
+
+      do {
+        do{
+          //on demande le premier chiffre, et transforme le string en nombre
+          var premierChiffre = parseInt(prompt("Entrez le premier Chiffre"), 10);
+          //on verifie que l'entrée utilisateur est un chiffre
+          if (Number.isNaN(premierChiffre)) {
+            verif = true;
+            alert("Ceci n'est pas un nombre, ré-essaiyer!");
+          }else {
+            verif = false;
+          }
+        }while(verif);
+
+        do{
+          //on demande le second chiffre, et transforme le string en nombre
+          var secondChifre = parseInt(prompt("Entrez le second chiffre"),10);
+          //on verifie que l'entrée utilisateur est un chiffre
+          if(Number.isNaN(secondChifre)){
+            verif = true;
+            alert("Ceci n'est pas un nombre, ré-essaiyer!");
+          }else {
+            verif = false;
+          }
+        }while(verif);
+
+        do{
+          var operateur = prompt("Entrez l'operateur ( + ou -  ou * ou /):");
+          //on verifie que l'operateur choisie ewt correct
+          if(operateur == "+" || operateur == "-" || operateur == "*" || operateur == "/"){
+            verif = false;
+          }else{
+            alert("mauvais operateur ré-essayez!");
+            verif = true;
+          }
+        }while(verif);
+
+        //calcul par la fonction calc
+        alert(calc(premierChiffre,secondChifre, operateur));
+
+        continuer = confirm("Voulez vous continuer?");
+      } while (continuer);
+    </script>
+  </body>
+</html>
