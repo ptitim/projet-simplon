@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>air Bnb</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--   -->
+  </head>
+  <body>
+    <script type="text/javascript">
+        var reponse = "blanc";
+        var reponseNombre = 7;
+        var reponseText = "sept";
+        var reponseEng = "seven";
+
+        var reponseUt = prompt("Quel est le cheval blanc d'henry 4?");
+
+        if(reponseUt.toLowerCase() === reponse || reponseUt.toLowerCase() === "white"){
+            alert("bravo");
+        }
+        else{
+            console.log(reponse);
+            console.log(reponseUt);
+            alert("bouh t'es nul");
+        }
+
+        reponseUt = prompt("Combien y a-t-il de 7 nain");
+        reponseUt = parseInt(reponseUt);
+
+        if(reponseNombre === reponseUt || reponseText.toLowerCase() === reponseUt || reponseText.toLowerCase() === reponseEng){
+            alert("bravo");
+        }else{
+            alert("perdu !");
+        }
+
+    </script>
+
+  </body>
+</html>
