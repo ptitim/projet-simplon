@@ -47,7 +47,7 @@
 
 .txthaut p:first-child {
   max-width: 100%;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bolder;
   margin: 0px;
   text-shadow: 0px 1px silver, 1px 0px silver, 0px -1px silver, -1px 0px silver;
@@ -69,18 +69,21 @@
 }
 
 .recherche form{
-  padding: 25px 0px;
+  padding: 30px 0px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 .sousRecherche{
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
   padding: 0px;
   margin: 0px;
 }
 
 .sousRecherche input{
-  height: 50px;
+  height: 45px;
   border: none;
   padding: 0;
   background-color: white;
