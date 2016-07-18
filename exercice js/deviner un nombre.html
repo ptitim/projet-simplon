@@ -7,7 +7,8 @@
   <body>
     <script>
       //Devinez un nombre entre 0 et 100, generez aleatoirement
-          var verif = function(reponse,aleatoire){
+
+          var verif = function(reponse, aleatoire){
               var bool = false;
               var dif = Math.abs(reponse - aleatoire) > 10;
 
@@ -22,7 +23,7 @@
                     else
                       alert("trop grand");
               }else if (reponse < 0 || reponse > 100) {
-                  alert("rappel chiffre entre 0 et 9, essais perdu");
+                  alert("rappel chiffre entre 0 et 100, essais perdu");
               }else if (reponse === aleatoire) {
                   bool = true;
               }
