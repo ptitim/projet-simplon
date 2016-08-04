@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //variable globales
+
+      var questionUser = "Entrez le nom d'utillisateur";
+      var questionPass = "Entrez le mod de passe";
+      var user;
+      var mdp;
+
+      var verificationUser = function(){
+          user = prompt(questionUser);
+          var indexAt = user.indexOf("@");
+          var userLength = user.length;
+
+          if (userLength <= 4) {
+            alert("le nom d'utilisateur doit contenir au moins 4 caractere");
+            if(indexAt === -1){
+                alert("le nom d'utilisateur doit contenir un @");
+                verificationUser();
+            }else{
+                return;
+            }
+          }else{
+            if(indexAt === -1){
+                alert("le nom d'utilisateur doit contenir un @");
+                verificationUser();
+            }else{
+                return;
+            }
+          }
+      };
+
+      var verificationMdp = function(){
+          mdp = prompt(questionPass);
+          var mdpLength = mdp.length;
+
+          if(mdpLength < 4){
+              alert("Le mor de passe doit contenir au moins 4 caractere");
+              verificationMdp();
+          }else{
+              return ;
+          }
+      }
+
+      var dico = {"toto@gmail.com" : 12345,
+                  "titi@gmail.com" : 15987,
+                  "denis@hotmail.uk" : 162490,
+                  "gege@titi.com" : 216919}
+
+      var compteurFaute = 0;
+
+      while(compteurFaute < 4){
+          verificationUser();
+          verificationMdp();
+
+          if(dico[user] === undefined || mdp != dico[user]){
+              compteurFaute++;
+              alert("Nom d'utilisateur ou mod de passe faux, il vous reste " + (4 - compteurFaute) + " essais");
+          }else{
+              alert("login");
+          }
+      }
+
+    </script>
+  </body>
+</html>

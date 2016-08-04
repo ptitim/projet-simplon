@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var username = "joe@gmail.com";
+    var password = "12345";
+    //boolean pour boucle de verification(username doit contenir @ et password au moins 4 chiffres )
+    var verif = false;
+
+    //recuperation du nom d'utilisateur
+    do{
+        var entree_user = prompt("Entrez le nom d'utilisateur");
+
+        console.log(entree_user.indexOf("@"));
+        if (entree_user.length <= 4) {
+          alert("le nom d'utilisateur doit contenir au moins 4 caractere");
+          if(entree_user.indexOf("@") === -1){
+              alert("le nom d'utilisateur doit contenir un @");
+              verif = true;
+          }else{
+              verif = false;
+          }
+        }else{
+          if(entree_user.indexOf("@") === -1){
+              alert("le nom d'utilisateur doit contenir un @");
+              verif = true;
+          }else{
+              verif = false;
+          }
+        }
+
+        console.log("valeur de verif: " +verif);
+    }while(verif);
+
+    //recuperation du mot de passe
+    do{
+      var entree_password = prompt("Entre le mot de passe:");
+      console.log("longeur mdp " +entree_password.length);
+      if(entree_password.length <= 4){
+          alert("le mot de passe doit contenir au moins 5 chiffre");
+          verif = true;
+      }else{
+          verif = false;
+      }
+    }while(verif)
+
+    if((entree_user === username) && (entree_password === password)){
+        alert("Bienvenue");
+    }else{
+        alert("Identifiant ou mot de passe incorrect")
+    }
+
+
+    </script>
+  </body>
+</html>

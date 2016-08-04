@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -32,7 +32,9 @@
             for(var i = 0; i < tableau.length; i++){
                 if(i != tableau.length -1){
                   str += tableau[i];
+                  str += " ";
                   str += operateurRandom();
+                  str += " ";
                 }else{
                     str += tableau[i];
                 }
@@ -42,12 +44,13 @@
         };
 
         var compteurReussite = 0;
-        var continuer = true;//condition de la boucle while
+        var continuer = true;//condition de la boucle while, sert aussi a a boucle de verification de l'entrée utilisateur
         var reponse;//reponse utilisateur
+        var reponseT; //transformation de la reponse en float
         var calcul;//string du calcul
         var result;//resultat  du calcul a 2 chiffre pares la virgule
         var compliquer = true;//sert a verifier si le joueur a atteint le niveaux 10, de reinitialisent si il pert
-        
+
       while(continuer){
 
           var chiffre1 = rand(9);
@@ -59,30 +62,41 @@
           }
           if(compteurReussite > 10){
               if(compliquer){
-                  alert("vous vous débrouillez bien on va compliquer un peu");
+                  alert("vous vous débrouillez bien! On va compliquer un peu");
                   compliquer = false;
               }
               tab.push(rand(50));
               tab.push(rand(50));
           }
-          calcul = calc(tab);
-          result = eval(calcul).toFixed(2);
+          calcul = calc(tab);//generation du string de calcul
+          result = Number(eval(calcul)).toFixed(2);//calcul
           console.log("resultat : " +result);
-          reponse = parseFloat(prompt("Calculer "+calcul+" de tete (Atention 2 chiffre aprés la virgule): ")).toFixed(2);
 
-          if(reponse === result){
-              alert("Bonne reponse!");
-              compteurReussite++;
-          }else{
-              alert("mauvaise réponse");
-              compteurReussite = 0;
-              compliquer = true;
+          reponse = prompt("Calculer "+calcul+" de tete (Atention 2 chiffre aprés la virgule): ");
+          reponseT = Number.parseFloat(reponse).toFixed(2);
+          console.log("reponse : "+reponse);
+          console.log("reponseT : "+reponseT);
+
+          if(!(reponse == "")){
+              while(isNaN(reponseT)){
+                  alert("Ceci n'est pas un nombre. re-essayer");
+                  reponse = prompt("Calculer "+calcul+" de tete (Atention 2 chiffre aprés la virgule): ");
+                  reponseT = parseFloat(reponse).toFixed(2);
+              }
+
+              if(reponseT === result){
+                  alert("Bonne reponse!");
+                  compteurReussite++;
+              }else{
+                  alert("mauvaise réponse");
+                  compteurReussite = 0;
+                  compliquer = true;
+              }
+              console.log("compteurReussite :" +compteurReussite);
           }
-          console.log("compteurReussite :" +compteurReussite);
           continuer = confirm("Voulez vous continuer ?");
       }
-
-
+      alert("aurevoir!");
     </script>
   </body>
 </html>
